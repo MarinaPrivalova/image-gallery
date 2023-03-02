@@ -1,0 +1,65 @@
+@import url(../vendor/normalize.css);
+@import url(../fonts/fonts.css);
+
+.page {
+  max-width: 1280px;
+  min-width: 320px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 400;
+  color: #f0f8ff;
+  background-color: #45322E;
+  box-sizing: border-box;
+  display: flex;
+  margin: 0 auto;
+}
+
+.panels {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  flex: 1;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+  box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+  transition: transform 0.5s;
+}
+
+.panel_one {
+  background-image: url(../images/dance.jpg);
+}
+
+.panel_two {
+  background-image: url(../images/flowers.jpg);
+}
+
+.panel_three {
+  background-image: url(../images/experience.jpg);
+}
+
+.panel_four {
+  background-image: url(../images/green.jpg);
+}
+
+.panel_five {
+  background-image: url(../images/road.jpg);
+}
+
+.panel__text {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 2em;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+}
+
+.panel__text:nth-child(2) {
+  font-size: 4em;
+}
