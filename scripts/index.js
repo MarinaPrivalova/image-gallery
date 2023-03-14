@@ -1,14 +1,11 @@
-const panels = document.querySelectorAll('.panel');
+const panels = Array.from(document.querySelectorAll('.panel'));
 
-function toggleOpen() {
-  this.classList.toggle('panel_open');
-}
-
-function toggleActive(e) {
-  if(e.propertyName.includes('flex')) {
-    this.classList.toggle('open-active');
-  }
-}
-
-panels.forEach(panel => panel.addEventListener('click', toggleOpen));
-panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+panels.forEach(panel => {
+  panel.addEventListener('click', () => {
+    const activePanels = Array.from(document.querySelectorAll('.panel_open'));
+    activePanels.forEach(activePanel => {
+      activePanel.classList.remove('panel_open');
+    });
+    panel.classList.add('panel_open');
+  });
+});
